@@ -7,15 +7,31 @@
     en: {
       title: 'Miguel Gutiérrez García · Software Developer & Engineer',
       description: 'Miguel Gutiérrez García, software developer and engineer. Stack, projects, game development and contact.',
+      openMenu: 'Open menu',
+      closeMenu: 'Close menu',
       copied: 'Email copied',
     },
     es: {
       title: 'Miguel Gutiérrez García · Desarrollador e Ingeniero de Software',
       description: 'Miguel Gutiérrez García, desarrollador e ingeniero de software. Tecnologías, proyectos, videojuegos y contacto.',
+      openMenu: 'Abrir menú',
+      closeMenu: 'Cerrar menú',
       copied: 'Email copiado',
     },
   };
   const t = (key) => (STR[root.lang] || STR.en)[key];
+
+  /* ---------- Menú móvil ---------- */
+  const nav = document.querySelector('[data-nav]');
+  const navToggle = document.querySelector('[data-nav-toggle]');
+  const setMenu = (open) => {
+    nav.classList.toggle('is-open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+    navToggle.setAttribute('aria-label', t(open ? 'closeMenu' : 'openMenu'));
+  };
+  navToggle.addEventListener('click', () => setMenu(!nav.classList.contains('is-open')));
+  nav.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
   /* ---------- Idioma (EN por defecto, ES opcional) ---------- */
   const metaDescription = document.querySelector('meta[name="description"]');
@@ -23,6 +39,7 @@
     root.lang = lang;
     document.title = t('title');
     metaDescription.setAttribute('content', t('description'));
+    navToggle.setAttribute('aria-label', t(nav.classList.contains('is-open') ? 'closeMenu' : 'openMenu'));
     document.querySelectorAll('[data-set-lang]').forEach((btn) => {
       btn.setAttribute('aria-pressed', String(btn.dataset.setLang === lang));
     });
@@ -59,18 +76,35 @@
     try { localStorage.setItem('theme', next); } catch (e) {}
   });
 
+  /* ---------- Enlace activo según la sección visible ---------- */
+  const links = [...nav.querySelectorAll('a[href^="#"]')];
+  const sections = links.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      links.forEach((a) => a.classList.toggle('is-active', a.getAttribute('href') === '#' + entry.target.id));
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  sections.forEach((s) => spy.observe(s));
+
   /* ---------- Aparición suave de las secciones ---------- */
   const reveals = document.querySelectorAll('.reveal');
   if (reducedMotion || !('IntersectionObserver' in window)) {
     reveals.forEach((el) => el.classList.add('is-visible'));
   } else {
+    // Pequeño escalonado entre tarjetas hermanas
+    reveals.forEach((el) => {
+      const siblings = [...el.parentElement.children].filter((c) => c.classList.contains('reveal'));
+      const i = siblings.indexOf(el);
+      if (i > 0) el.style.setProperty('--delay', Math.min(i, 5) * 60 + 'ms');
+    });
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         entry.target.classList.add('is-visible');
         io.unobserve(entry.target);
       });
-    }, { rootMargin: '0px 0px -5% 0px', threshold: 0.05 });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.05 });
     reveals.forEach((el) => io.observe(el));
   }
 

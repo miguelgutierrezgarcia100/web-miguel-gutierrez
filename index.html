@@ -6,8 +6,8 @@
   <title>Miguel Gutiérrez García · Software Developer &amp; Engineer</title>
   <meta name="description" content="Miguel Gutiérrez García, software developer and engineer. Stack, projects, game development and contact.">
   <meta name="author" content="Miguel Gutiérrez García">
-  <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#121211" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)">
 
   <!-- TODO: cuando tengas dominio propio, cambia estas dos URLs -->
   <link rel="canonical" href="https://miguelgutierrezgarcia100.github.io/web-miguel-gutierrez/">
@@ -40,6 +40,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script src="assets/js/main.js" defer></script>
 
@@ -64,21 +65,34 @@
 -->
 <body>
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24"><path class="fill" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
     <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
-    <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
-    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7M12 19V5"/></symbol>
     <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2m-7.07-17.07 1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
     <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 6h.01M6 18h.01"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8m-4-4v4"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6m8 14h8"/></symbol>
+    <symbol id="i-test" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></symbol>
+    <symbol id="i-gamepad" viewBox="0 0 24 24"><path d="M6 11h4M8 9v4m7-1h.01M18 10h.01"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></symbol>
+    <symbol id="i-grad" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
   </svg>
 
   <a class="skip-link" href="#main"><span lang="en">Skip to content</span><span lang="es">Saltar al contenido</span></a>
 
   <!-- ============ CABECERA ============ -->
-  <header class="header">
+  <header class="header" data-header>
     <div class="wrap header__inner">
       <a class="logo" href="#top">Miguel Gutiérrez</a>
 
-      <nav class="nav" data-l10n aria-label="Main" data-en-aria-label="Main" data-es-aria-label="Principal">
+      <nav class="nav" id="nav" data-nav data-l10n aria-label="Main" data-en-aria-label="Main" data-es-aria-label="Principal">
         <a href="#stack"><span lang="en">Stack</span><span lang="es">Tecnologías</span></a>
         <a href="#projects"><span lang="en">Projects</span><span lang="es">Proyectos</span></a>
         <a href="#games"><span lang="en">Games</span><span lang="es">Videojuegos</span></a>
@@ -96,169 +110,315 @@
           <svg class="icon icon--moon"><use href="#i-moon"/></svg>
           <svg class="icon icon--sun"><use href="#i-sun"/></svg>
         </button>
+        <a class="icon-btn hide-sm" href="https://github.com/miguelgutierrezgarcia100" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg class="icon icon--fill"><use href="#i-github"/></svg>
+        </a>
+        <button class="icon-btn menu-btn" type="button" aria-controls="nav" aria-expanded="false" aria-label="Open menu" data-nav-toggle>
+          <svg class="icon icon--open"><use href="#i-menu"/></svg>
+          <svg class="icon icon--close"><use href="#i-x"/></svg>
+        </button>
       </div>
     </div>
   </header>
 
-  <main id="main" class="wrap">
+  <main id="main">
 
     <!-- ============ PRESENTACIÓN ============ -->
-    <section class="intro" id="top">
-      <img class="intro__avatar" src="assets/img/miguel.jpg" width="160" height="160" data-l10n alt="Photo of Miguel Gutiérrez García"
-           data-en-alt="Photo of Miguel Gutiérrez García" data-es-alt="Foto de Miguel Gutiérrez García">
-      <h1 class="intro__name">Miguel Gutiérrez García</h1>
-      <p class="intro__role"><span lang="en">Software Developer &amp; Engineer</span><span lang="es">Desarrollador e Ingeniero de Software</span></p>
-      <p class="intro__text" lang="en">
-        I build reliable, maintainable software, mostly backend services and web applications,
-        and I develop video games in my spare time.
-      </p>
-      <p class="intro__text" lang="es">
-        Construyo software fiable y mantenible, sobre todo servicios backend y aplicaciones web,
-        y en mi tiempo libre desarrollo videojuegos.
-      </p>
-      <ul class="intro__meta">
-        <li><span class="dot" aria-hidden="true"></span><span lang="en">Open to work</span><span lang="es">Disponible</span></li>
-        <li><span lang="en">Oviedo, Spain</span><span lang="es">Oviedo, España</span></li>
-        <li><a href="https://github.com/miguelgutierrezgarcia100" target="_blank" rel="noopener">GitHub</a></li>
-        <li><a href="mailto:miguelgutierrezgarcia100@gmail.com">Email</a></li>
-      </ul>
+    <section class="hero" id="top">
+      <div class="wrap hero__grid">
+        <div class="hero__content">
+          <div class="hero__top">
+            <img class="hero__avatar" src="assets/img/miguel.jpg" width="160" height="160" data-l10n alt="Photo of Miguel Gutiérrez García"
+                 data-en-alt="Photo of Miguel Gutiérrez García" data-es-alt="Foto de Miguel Gutiérrez García">
+            <p class="status"><span class="status__dot" aria-hidden="true"></span><span lang="en">Open to new opportunities</span><span lang="es">Disponible para nuevas oportunidades</span></p>
+          </div>
+
+          <p class="hero__hello"><span lang="en">Hi, I'm</span><span lang="es">Hola, soy</span></p>
+          <h1 class="hero__name">Miguel Gutiérrez García</h1>
+          <p class="hero__role"><span lang="en">Software Developer &amp; Engineer</span><span lang="es">Desarrollador e Ingeniero de Software</span></p>
+
+          <p class="hero__lead" lang="en">
+            I build reliable, maintainable software for the web and the backend, and I also develop video games.
+            Used to working in agile teams with Git.
+          </p>
+          <p class="hero__lead" lang="es">
+            Construyo software fiable y mantenible para web y backend, y también desarrollo videojuegos.
+            Acostumbrado a trabajar en equipos ágiles con Git.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects"><span lang="en">View projects</span><span lang="es">Ver proyectos</span> <svg class="icon"><use href="#i-arrow-right"/></svg></a>
+            <a class="btn btn--ghost" href="#contact"><span lang="en">Get in touch</span><span lang="es">Contactar</span></a>
+            <span class="hero__links">
+              <a class="icon-btn" href="https://github.com/miguelgutierrezgarcia100" target="_blank" rel="noopener" aria-label="GitHub"><svg class="icon icon--fill"><use href="#i-github"/></svg></a>
+              <a class="icon-btn" href="mailto:miguelgutierrezgarcia100@gmail.com" aria-label="Email"><svg class="icon"><use href="#i-mail"/></svg></a>
+            </span>
+          </div>
+        </div>
+
+        <figure class="editor" aria-hidden="true">
+          <div class="editor__bar"><i></i><i></i><i></i><span>miguel.ts</span></div>
+<pre class="editor__code"><code><span class="ln">1</span><span class="tk-k">const</span> <span class="tk-v">miguel</span> = {
+<span class="ln">2</span>  <span class="tk-p">role</span>: <span class="tk-s">"Software Developer &amp; Engineer"</span>,
+<span class="ln">3</span>  <span class="tk-p">stack</span>: [<span class="tk-s">"Java"</span>, <span class="tk-s">"Python"</span>, <span class="tk-s">"C#"</span>, <span class="tk-s">"JS"</span>],
+<span class="ln">4</span>  <span class="tk-p">backend</span>: [<span class="tk-s">"Spring Boot"</span>, <span class="tk-s">"Node.js"</span>],
+<span class="ln">5</span>  <span class="tk-p">frontend</span>: [<span class="tk-s">"React"</span>, <span class="tk-s">"HTML"</span>, <span class="tk-s">"CSS"</span>],
+<span class="ln">6</span>  <span class="tk-p">tools</span>: [<span class="tk-s">"Git"</span>, <span class="tk-s">"Docker"</span>, <span class="tk-s">"Azure"</span>],
+<span class="ln">7</span>  <span class="tk-p">english</span>: <span class="tk-s">"B2"</span>,
+<span class="ln">8</span>  <span class="tk-p">available</span>: <span class="tk-b">true</span>,
+<span class="ln">9</span>};</code></pre>
+          <div class="editor__status"><span>● main</span><span>UTF-8</span><span>TypeScript</span></div>
+        </figure>
+      </div>
+
+      <div class="wrap">
+        <!-- TODO: revisa estos datos -->
+        <dl class="facts">
+          <div>
+            <dt><span lang="en">Education</span><span lang="es">Formación</span></dt>
+            <dd><span lang="en">Software Engineering Degree</span><span lang="es">Ingeniería Informática del Software</span>
+              <small><span lang="en">University of Oviedo</span><span lang="es">Universidad de Oviedo</span> · 2022–2026</small></dd>
+          </div>
+          <div>
+            <dt><span lang="en">Focus</span><span lang="es">Enfoque</span></dt>
+            <dd><span lang="en">Backend &amp; web development</span><span lang="es">Desarrollo backend y web</span>
+              <small><span lang="en">Plus game development</span><span lang="es">Y desarrollo de videojuegos</span></small></dd>
+          </div>
+          <div>
+            <dt><span lang="en">Languages</span><span lang="es">Idiomas</span></dt>
+            <dd><span lang="en">Spanish (native)</span><span lang="es">Español (nativo)</span>
+              <small><span lang="en">English (B2)</span><span lang="es">Inglés (B2)</span></small></dd>
+          </div>
+          <div>
+            <dt><span lang="en">Location</span><span lang="es">Ubicación</span></dt>
+            <dd><span lang="en">Oviedo, Spain</span><span lang="es">Oviedo, España</span>
+              <small><span lang="en">On-site, hybrid or remote</span><span lang="es">Presencial, híbrido o remoto</span></small></dd>
+          </div>
+        </dl>
+      </div>
     </section>
 
-    <!-- ============ TECNOLOGÍAS ============ -->
-    <section class="block reveal" id="stack">
-      <h2 class="block__label"><span lang="en">Stack</span><span lang="es">Tecnologías</span></h2>
-      <div class="block__body">
-        <dl class="skills">
-          <div>
-            <dt><span lang="en">Languages</span><span lang="es">Lenguajes</span></dt>
-            <dd><ul class="list"><li>Java</li><li>Python</li><li>C#</li><li>C++</li><li>JavaScript</li><li>PHP</li><li>SQL</li></ul></dd>
-          </div>
-          <div>
-            <dt>Backend</dt>
-            <dd><ul class="list"><li>Spring Boot</li><li>Node.js</li><li>Express</li><li><span lang="en">REST APIs</span><span lang="es">APIs REST</span></li><li><span lang="en">Microservices</span><span lang="es">Microservicios</span></li></ul></dd>
-          </div>
-          <div>
-            <dt>Frontend</dt>
-            <dd><ul class="list"><li>React</li><li>HTML</li><li>CSS</li><li>Java Swing</li></ul></dd>
-          </div>
-          <div>
-            <dt><span lang="en">Data</span><span lang="es">Datos</span></dt>
-            <dd><ul class="list"><li>MongoDB</li><li>Oracle · PL/SQL</li><li>XML · XSD</li></ul></dd>
-          </div>
-          <div>
-            <dt><span lang="en">Tools &amp; cloud</span><span lang="es">Herramientas y cloud</span></dt>
-            <dd><ul class="list"><li>Git</li><li>GitHub Actions</li><li>Docker</li><li>Azure</li><li>Maven</li></ul></dd>
-          </div>
-          <div>
-            <dt>Testing</dt>
-            <dd><ul class="list"><li>JUnit</li><li>Selenium</li><li>Cucumber</li><li>SonarCloud</li></ul></dd>
-          </div>
+    <!-- ============ 01 · TECNOLOGÍAS ============ -->
+    <section class="section section--alt" id="stack">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="section__label">01 — <span lang="en">Stack</span><span lang="es">Tecnologías</span></p>
+          <h2 class="section__title"><span lang="en">What I work with.</span><span lang="es">Con qué trabajo.</span></h2>
+          <p class="section__lead" lang="en">Technologies I've used in university and personal projects.</p>
+          <p class="section__lead" lang="es">Tecnologías que he usado en proyectos de la universidad y personales.</p>
+        </header>
+
+        <div class="skills">
+          <article class="card skill reveal">
+            <h3 class="skill__title"><svg class="icon"><use href="#i-code"/></svg><span lang="en">Languages</span><span lang="es">Lenguajes</span></h3>
+            <ul class="skill__list">
+              <li><i class="devicon-java-plain colored"></i>Java</li>
+              <li><i class="devicon-python-plain colored"></i>Python</li>
+              <li><i class="devicon-csharp-plain colored"></i>C#</li>
+              <li><i class="devicon-cplusplus-plain colored"></i>C++</li>
+              <li><i class="devicon-javascript-plain colored"></i>JavaScript</li>
+              <li><i class="devicon-php-plain colored"></i>PHP</li>
+              <li><i class="devicon-sqldeveloper-plain colored"></i>SQL · PL/SQL</li>
+            </ul>
+          </article>
+          <article class="card skill reveal">
+            <h3 class="skill__title"><svg class="icon"><use href="#i-server"/></svg>Backend</h3>
+            <ul class="skill__list">
+              <li><i class="devicon-spring-original colored"></i>Spring Boot</li>
+              <li><i class="devicon-nodejs-plain colored"></i>Node.js</li>
+              <li><i class="devicon-express-original"></i>Express</li>
+              <li><i class="devicon-mongodb-plain colored"></i>MongoDB</li>
+              <li><i class="mark"></i><span lang="en">REST APIs</span><span lang="es">APIs REST</span></li>
+              <li><i class="mark"></i><span lang="en">Microservices</span><span lang="es">Microservicios</span></li>
+            </ul>
+          </article>
+          <article class="card skill reveal">
+            <h3 class="skill__title"><svg class="icon"><use href="#i-monitor"/></svg>Frontend &amp; UI</h3>
+            <ul class="skill__list">
+              <li><i class="devicon-react-original colored"></i>React</li>
+              <li><i class="devicon-html5-plain colored"></i>HTML</li>
+              <li><i class="devicon-css3-plain colored"></i>CSS</li>
+              <li><i class="devicon-java-plain colored"></i>Java Swing</li>
+              <li><i class="devicon-xml-plain colored"></i>XML · XSD</li>
+            </ul>
+          </article>
+          <article class="card skill reveal">
+            <h3 class="skill__title"><svg class="icon"><use href="#i-terminal"/></svg><span lang="en">Tools &amp; cloud</span><span lang="es">Herramientas y cloud</span></h3>
+            <ul class="skill__list">
+              <li><i class="devicon-git-plain colored"></i>Git</li>
+              <li><i class="devicon-githubactions-plain colored"></i>GitHub Actions</li>
+              <li><i class="devicon-docker-plain colored"></i>Docker</li>
+              <li><i class="devicon-azure-plain colored"></i>Azure</li>
+              <li><i class="devicon-maven-plain colored"></i>Maven</li>
+            </ul>
+          </article>
+          <article class="card skill reveal">
+            <h3 class="skill__title"><svg class="icon"><use href="#i-test"/></svg><span lang="en">Testing &amp; quality</span><span lang="es">Testing y calidad</span></h3>
+            <ul class="skill__list">
+              <li><i class="devicon-junit-plain colored"></i>JUnit</li>
+              <li><i class="devicon-selenium-original colored"></i>Selenium</li>
+              <li><i class="devicon-cucumber-plain colored"></i>Cucumber</li>
+              <li><i class="devicon-sonarqube-original colored"></i>SonarCloud</li>
+            </ul>
+          </article>
           <!-- TODO: confirma el motor de tus juegos -->
+          <article class="card skill reveal">
+            <h3 class="skill__title"><svg class="icon"><use href="#i-gamepad"/></svg><span lang="en">Game development</span><span lang="es">Videojuegos</span></h3>
+            <ul class="skill__list">
+              <li><i class="devicon-unity-plain"></i>Unity</li>
+              <li><i class="devicon-csharp-plain colored"></i>C#</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="practices reveal">
+          <p class="practices__label"><span lang="en">Methodologies &amp; practices</span><span lang="es">Metodologías y prácticas</span></p>
+          <ul class="tags" lang="en"><li>Agile &amp; Scrum</li><li>Object-oriented design</li><li>Design patterns</li><li>Layered architecture</li><li>Clean code</li><li>Code review</li></ul>
+          <ul class="tags" lang="es"><li>Ágil y Scrum</li><li>Diseño orientado a objetos</li><li>Patrones de diseño</li><li>Arquitectura en capas</li><li>Código limpio</li><li>Revisión de código</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 · PROYECTOS ============ -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <header class="section__head section__head--row reveal">
           <div>
-            <dt><span lang="en">Game dev</span><span lang="es">Videojuegos</span></dt>
-            <dd><ul class="list"><li>Unity</li><li>C#</li></ul></dd>
+            <p class="section__label">02 — <span lang="en">Projects</span><span lang="es">Proyectos</span></p>
+            <h2 class="section__title"><span lang="en">What I've built.</span><span lang="es">Lo que he construido.</span></h2>
           </div>
-          <div>
-            <dt><span lang="en">Practices</span><span lang="es">Prácticas</span></dt>
-            <dd>
-              <ul class="list" lang="en"><li>Agile &amp; Scrum</li><li>OOP</li><li>Design patterns</li><li>Layered architecture</li><li>Clean code</li></ul>
-              <ul class="list" lang="es"><li>Ágil y Scrum</li><li>POO</li><li>Patrones de diseño</li><li>Arquitectura en capas</li><li>Código limpio</li></ul>
-            </dd>
+          <a class="link" href="https://github.com/miguelgutierrezgarcia100" target="_blank" rel="noopener">
+            <span lang="en">All my code on GitHub</span><span lang="es">Todo mi código en GitHub</span> <svg class="icon"><use href="#i-arrow-up-right"/></svg>
+          </a>
+        </header>
+
+        <div class="projects">
+          <article class="card project project--featured reveal">
+            <div class="project__info">
+              <p class="project__kicker"><span lang="en">Featured · Software Architecture · Team of 4 · 2024–25</span><span lang="es">Destacado · Arquitectura del Software · Equipo de 4 · 2024–25</span></p>
+              <h3 class="project__title">WIChat</h3>
+              <p class="project__subtitle"><span lang="en">AI-powered quiz game</span><span lang="es">Juego de preguntas con IA</span></p>
+              <p class="project__desc" lang="en">A distributed web application where players answer questions generated from Wikidata and can ask an assistant, backed by a large language model, for hints. Built as a team with agile practices, CI, quality gates and container-based deployment.</p>
+              <p class="project__desc" lang="es">Aplicación web distribuida en la que el jugador responde preguntas generadas a partir de Wikidata y puede pedir pistas a un asistente basado en un modelo de lenguaje. Hecha en equipo con metodología ágil, CI, control de calidad y despliegue con contenedores.</p>
+              <ul class="tags"><li>React</li><li>Node.js</li><li>Express</li><li>MongoDB</li><li>Docker</li><li>LLM</li></ul>
+              <a class="link" href="https://github.com/miguelgutierrezgarcia100/wichat_es4c" target="_blank" rel="noopener"><span lang="en">View code</span><span lang="es">Ver código</span> <svg class="icon"><use href="#i-arrow-up-right"/></svg></a>
+            </div>
+            <div class="project__arch">
+              <p class="project__arch-label"><span lang="en">Architecture</span><span lang="es">Arquitectura</span></p>
+              <ul class="arch">
+                <li><code>webapp</code><span lang="en">React frontend</span><span lang="es">Frontend en React</span></li>
+                <li><code>gateway</code><span lang="en">Single public entry point</span><span lang="es">Único punto de entrada público</span></li>
+                <li><code>users · auth</code><span lang="en">Accounts and sessions (MongoDB)</span><span lang="es">Cuentas y sesiones (MongoDB)</span></li>
+                <li><code>questions</code><span lang="en">Generated from Wikidata</span><span lang="es">Generadas desde Wikidata</span></li>
+                <li><code>llm</code><span lang="en">Hints from a language model</span><span lang="es">Pistas de un modelo de lenguaje</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="card project reveal">
+            <p class="project__kicker"><span lang="en">Team · 2024–25</span><span lang="es">Equipo · 2024–25</span></p>
+            <h3 class="project__title"><span lang="en">Football club manager</span><span lang="es">Gestión de club de fútbol</span></h3>
+            <p class="project__desc" lang="en">Desktop application to run a football club: teams, matches, schedules, tickets, shop, finances, medical staff and statistics. Layered architecture with charts, Excel export and email.</p>
+            <p class="project__desc" lang="es">Aplicación de escritorio para gestionar un club: equipos, partidos, horarios, entradas, tienda, economía, servicio médico y estadísticas. Arquitectura en capas con gráficas, exportación a Excel y correo.</p>
+            <ul class="tags"><li>Java</li><li>Swing</li><li>JFreeChart</li><li>Apache POI</li><li>JUnit</li></ul>
+            <a class="link" href="https://github.com/miguelgutierrezgarcia100/IPS-Gestion-deportiva" target="_blank" rel="noopener"><span lang="en">View code</span><span lang="es">Ver código</span> <svg class="icon"><use href="#i-arrow-up-right"/></svg></a>
+          </article>
+
+          <article class="card project reveal">
+            <p class="project__kicker"><span lang="en">Solo · 2025–26</span><span lang="es">Individual · 2025–26</span></p>
+            <h3 class="project__title">MotoGP Desktop</h3>
+            <p class="project__desc" lang="en">Accessible, standards-compliant MotoGP website: rider and circuit pages, weather, standings in PHP and browser games. Circuit data in XML, validated with XSD and converted to HTML, KML and SVG with Python.</p>
+            <p class="project__desc" lang="es">Web de MotoGP accesible y conforme a estándares: piloto, circuito, meteorología, clasificaciones en PHP y juegos. Datos del circuito en XML, validados con XSD y convertidos a HTML, KML y SVG con Python.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>Python</li><li>XML</li></ul>
+            <a class="link" href="https://github.com/miguelgutierrezgarcia100/Web-Software-Standards-and-Accesibility" target="_blank" rel="noopener"><span lang="en">View code</span><span lang="es">Ver código</span> <svg class="icon"><use href="#i-arrow-up-right"/></svg></a>
+          </article>
+
+          <article class="card project reveal">
+            <p class="project__kicker"><span lang="en">Solo · 2026</span><span lang="es">Individual · 2026</span></p>
+            <h3 class="project__title"><span lang="en">This website</span><span lang="es">Esta web</span></h3>
+            <p class="project__desc" lang="en">Bilingual personal site with light and dark themes, built without frameworks and deployed with GitHub Pages.</p>
+            <p class="project__desc" lang="es">Web personal bilingüe con tema claro y oscuro, hecha sin frameworks y publicada con GitHub Pages.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            <a class="link" href="https://github.com/miguelgutierrezgarcia100/web-miguel-gutierrez" target="_blank" rel="noopener"><span lang="en">View code</span><span lang="es">Ver código</span> <svg class="icon"><use href="#i-arrow-up-right"/></svg></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 · VIDEOJUEGOS ============ -->
+    <!-- TODO: cuando tengas capturas o vídeo de los juegos, se pueden añadir aquí -->
+    <section class="section section--alt" id="games">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="section__label">03 — <span lang="en">Games</span><span lang="es">Videojuegos</span></p>
+          <h2 class="section__title"><span lang="en">Game development.</span><span lang="es">Desarrollo de videojuegos.</span></h2>
+        </header>
+
+        <div class="card games reveal">
+          <div class="games__text">
+            <p lang="en">Outside university I design and program my own games, end to end: mechanics, game systems, UI and performance. Two personal projects are in progress and not released yet.</p>
+            <p lang="es">Fuera de la universidad diseño y programo mis propios juegos de principio a fin: mecánicas, sistemas de juego, interfaz y rendimiento. Tengo dos proyectos personales en marcha, aún sin publicar.</p>
+            <p lang="en">It's where I've learned the most about performance, architecture and iterating on feedback.</p>
+            <p lang="es">Es donde más he aprendido sobre rendimiento, arquitectura e iterar a partir del feedback.</p>
           </div>
-        </dl>
+          <dl class="games__facts">
+            <div><dt><span lang="en">Engine</span><span lang="es">Motor</span></dt><dd>Unity · C#</dd></div>
+            <div><dt><span lang="en">Projects</span><span lang="es">Proyectos</span></dt><dd><span lang="en">2 personal</span><span lang="es">2 personales</span></dd></div>
+            <div><dt><span lang="en">Status</span><span lang="es">Estado</span></dt><dd><span lang="en">In development</span><span lang="es">En desarrollo</span></dd></div>
+          </dl>
+        </div>
       </div>
     </section>
 
-    <!-- ============ PROYECTOS ============ -->
-    <section class="block reveal" id="projects">
-      <h2 class="block__label"><span lang="en">Projects</span><span lang="es">Proyectos</span></h2>
-      <div class="block__body">
-        <article class="entry">
-          <header class="entry__head">
-            <h3><a href="https://github.com/miguelgutierrezgarcia100/wichat_es4c" target="_blank" rel="noopener">WIChat <svg class="icon"><use href="#i-arrow-up-right"/></svg></a></h3>
-            <p class="entry__meta"><span lang="en">Team of 4</span><span lang="es">Equipo de 4</span> · 2024–25</p>
-          </header>
-          <p lang="en">Quiz game with an AI assistant, built as microservices (users, auth, Wikidata questions, LLM) behind a gateway, with a React frontend, CI and quality gates.</p>
-          <p lang="es">Juego de preguntas con asistente de IA, hecho con microservicios (usuarios, autenticación, preguntas de Wikidata, LLM) tras un gateway, con frontend en React, CI y control de calidad.</p>
-          <p class="entry__stack">React · Node.js · Express · MongoDB · Docker</p>
-        </article>
+    <!-- ============ 04 · FORMACIÓN ============ -->
+    <section class="section" id="education">
+      <div class="wrap">
+        <header class="section__head reveal">
+          <p class="section__label">04 — <span lang="en">Education</span><span lang="es">Formación</span></p>
+          <h2 class="section__title"><span lang="en">Background.</span><span lang="es">De dónde vengo.</span></h2>
+        </header>
 
-        <article class="entry">
-          <header class="entry__head">
-            <h3><a href="https://github.com/miguelgutierrezgarcia100/IPS-Gestion-deportiva" target="_blank" rel="noopener"><span lang="en">Football club manager</span><span lang="es">Gestión de club de fútbol</span> <svg class="icon"><use href="#i-arrow-up-right"/></svg></a></h3>
-            <p class="entry__meta"><span lang="en">Team</span><span lang="es">Equipo</span> · 2024–25</p>
-          </header>
-          <p lang="en">Desktop application to run a football club: teams, matches, schedules, tickets, shop, finances, medical staff and statistics. Layered architecture with charts, Excel export and email.</p>
-          <p lang="es">Aplicación de escritorio para gestionar un club: equipos, partidos, horarios, entradas, tienda, economía, servicio médico y estadísticas. Arquitectura en capas con gráficas, exportación a Excel y correo.</p>
-          <p class="entry__stack">Java · Swing · JFreeChart · Apache POI · JUnit</p>
-        </article>
-
-        <article class="entry">
-          <header class="entry__head">
-            <h3><a href="https://github.com/miguelgutierrezgarcia100/Web-Software-Standards-and-Accesibility" target="_blank" rel="noopener">MotoGP Desktop <svg class="icon"><use href="#i-arrow-up-right"/></svg></a></h3>
-            <p class="entry__meta"><span lang="en">Solo</span><span lang="es">Individual</span> · 2025–26</p>
-          </header>
-          <p lang="en">Accessible, standards-compliant MotoGP website with rider and circuit pages, weather, standings in PHP and browser games. Circuit data in XML, validated with XSD and converted to HTML, KML and SVG with Python.</p>
-          <p lang="es">Web de MotoGP accesible y conforme a estándares, con piloto, circuito, meteorología, clasificaciones en PHP y juegos. Datos del circuito en XML, validados con XSD y convertidos a HTML, KML y SVG con Python.</p>
-          <p class="entry__stack">HTML · CSS · JavaScript · PHP · Python · XML</p>
-        </article>
-
-        <article class="entry">
-          <header class="entry__head">
-            <h3><a href="https://github.com/miguelgutierrezgarcia100/web-miguel-gutierrez" target="_blank" rel="noopener"><span lang="en">This website</span><span lang="es">Esta web</span> <svg class="icon"><use href="#i-arrow-up-right"/></svg></a></h3>
-            <p class="entry__meta"><span lang="en">Solo</span><span lang="es">Individual</span> · 2026</p>
-          </header>
-          <p lang="en">Bilingual personal site with light and dark themes, built without frameworks and deployed with GitHub Pages.</p>
-          <p lang="es">Web personal bilingüe con tema claro y oscuro, hecha sin frameworks y publicada con GitHub Pages.</p>
-          <p class="entry__stack">HTML · CSS · JavaScript</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- ============ VIDEOJUEGOS ============ -->
-    <section class="block reveal" id="games">
-      <h2 class="block__label"><span lang="en">Games</span><span lang="es">Videojuegos</span></h2>
-      <div class="block__body">
-        <p lang="en">Outside university I design and program my own games, end to end: mechanics, systems and performance. Two personal projects in progress, not released yet.</p>
-        <p lang="es">Fuera de la universidad diseño y programo mis propios juegos de principio a fin: mecánicas, sistemas y rendimiento. Dos proyectos personales en marcha, aún sin publicar.</p>
-        <p class="entry__stack">Unity · C#</p>
-      </div>
-    </section>
-
-    <!-- ============ FORMACIÓN ============ -->
-    <section class="block reveal" id="education">
-      <h2 class="block__label"><span lang="en">Education</span><span lang="es">Formación</span></h2>
-      <div class="block__body">
         <!-- TODO: confirma los años de la carrera -->
-        <article class="entry">
-          <header class="entry__head">
-            <h3><span lang="en">Software Engineering Degree</span><span lang="es">Grado en Ingeniería Informática del Software</span></h3>
-            <p class="entry__meta">2022–2026</p>
-          </header>
-          <p><span lang="en">University of Oviedo · School of Computer Engineering</span><span lang="es">Universidad de Oviedo · Escuela de Ingeniería Informática</span></p>
+        <article class="card edu reveal">
+          <span class="edu__icon"><svg class="icon"><use href="#i-grad"/></svg></span>
+          <div class="edu__body">
+            <div class="edu__head">
+              <h3><span lang="en">Software Engineering Degree</span><span lang="es">Grado en Ingeniería Informática del Software</span></h3>
+              <p class="edu__date">2022 — 2026</p>
+            </div>
+            <p class="edu__org"><span lang="en">University of Oviedo · School of Computer Engineering</span><span lang="es">Universidad de Oviedo · Escuela de Ingeniería Informática</span></p>
+            <p class="edu__desc" lang="en">Focused on the full software lifecycle (architecture, web, distributed systems, databases and quality) with team projects throughout the degree.</p>
+            <p class="edu__desc" lang="es">Centrado en el ciclo de vida completo del software (arquitectura, web, sistemas distribuidos, bases de datos y calidad) con proyectos en equipo durante toda la carrera.</p>
+            <ul class="tags" lang="en"><li>Software Architecture</li><li>Distributed Systems and Internet</li><li>Web Software and Standards</li><li>Databases</li></ul>
+            <ul class="tags" lang="es"><li>Arquitectura del Software</li><li>Sistemas Distribuidos e Internet</li><li>Software y Estándares para la Web</li><li>Bases de Datos</li></ul>
+          </div>
         </article>
-        <dl class="details">
-          <div><dt><span lang="en">Languages</span><span lang="es">Idiomas</span></dt><dd><span lang="en">Spanish (native), English (B2)</span><span lang="es">Español (nativo), inglés (B2)</span></dd></div>
-          <div><dt><span lang="en">Work mode</span><span lang="es">Modalidad</span></dt><dd><span lang="en">On-site, hybrid or remote</span><span lang="es">Presencial, híbrido o remoto</span></dd></div>
-        </dl>
       </div>
     </section>
 
-    <!-- ============ CONTACTO ============ -->
-    <section class="block reveal" id="contact">
-      <h2 class="block__label"><span lang="en">Contact</span><span lang="es">Contacto</span></h2>
-      <div class="block__body">
-        <p lang="en">Open to software developer and engineer roles. The best way to reach me is by email.</p>
-        <p lang="es">Busco puestos de desarrollador o ingeniero de software. La mejor forma de contactarme es por email.</p>
-        <p class="contact__mail">
-          <a href="mailto:miguelgutierrezgarcia100@gmail.com">miguelgutierrezgarcia100@gmail.com</a>
-          <button class="icon-btn" type="button" data-copy="miguelgutierrezgarcia100@gmail.com" data-l10n aria-label="Copy email"
-                  data-en-aria-label="Copy email" data-es-aria-label="Copiar email">
-            <svg class="icon icon--copy"><use href="#i-copy"/></svg>
-            <svg class="icon icon--done"><use href="#i-check"/></svg>
-          </button>
-        </p>
-        <p><a href="https://github.com/miguelgutierrezgarcia100" target="_blank" rel="noopener">github.com/miguelgutierrezgarcia100</a></p>
+    <!-- ============ 05 · CONTACTO ============ -->
+    <section class="section section--alt" id="contact">
+      <div class="wrap">
+        <div class="card contact reveal">
+          <p class="section__label">05 — <span lang="en">Contact</span><span lang="es">Contacto</span></p>
+          <h2 class="section__title"><span lang="en">Let's talk.</span><span lang="es">¿Hablamos?</span></h2>
+          <p class="contact__lead" lang="en">Open to software developer and engineer roles. Write to me and I'll get back to you soon.</p>
+          <p class="contact__lead" lang="es">Busco puestos como desarrollador o ingeniero de software. Escríbeme y te respondo lo antes posible.</p>
+
+          <div class="contact__mail">
+            <a href="mailto:miguelgutierrezgarcia100@gmail.com">miguelgutierrezgarcia100@gmail.com</a>
+            <button class="icon-btn" type="button" data-copy="miguelgutierrezgarcia100@gmail.com" data-l10n aria-label="Copy email"
+                    data-en-aria-label="Copy email" data-es-aria-label="Copiar email">
+              <svg class="icon icon--copy"><use href="#i-copy"/></svg>
+              <svg class="icon icon--done"><use href="#i-check"/></svg>
+            </button>
+          </div>
+
+          <div class="contact__actions">
+            <a class="btn btn--primary" href="mailto:miguelgutierrezgarcia100@gmail.com"><svg class="icon"><use href="#i-mail"/></svg> <span lang="en">Send an email</span><span lang="es">Enviar un email</span></a>
+            <a class="btn btn--ghost" href="https://github.com/miguelgutierrezgarcia100" target="_blank" rel="noopener"><svg class="icon icon--fill"><use href="#i-github"/></svg> GitHub</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -266,7 +426,8 @@
   <footer class="footer">
     <div class="wrap footer__inner">
       <p>© <span data-year>2026</span> Miguel Gutiérrez García</p>
-      <a href="#top"><span lang="en">Back to top</span><span lang="es">Volver arriba</span> ↑</a>
+      <p><span lang="en">Built with HTML, CSS and JavaScript</span><span lang="es">Hecha con HTML, CSS y JavaScript</span></p>
+      <a href="#top"><span lang="en">Back to top</span><span lang="es">Volver arriba</span> <svg class="icon"><use href="#i-arrow-up"/></svg></a>
     </div>
   </footer>
 
