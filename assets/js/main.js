@@ -6,32 +6,34 @@
   const STR = {
     en: {
       title: 'Miguel Gutiérrez García · Software Developer & Engineer',
-      description: 'Portfolio of Miguel Gutiérrez García, software developer and engineer. Skills, projects, game development and contact.',
+      description: 'Portfolio of Miguel Gutiérrez García, software developer and engineer. Stack, projects, game development and contact.',
       openMenu: 'Open menu',
       closeMenu: 'Close menu',
-      copied: 'Email copied to clipboard',
+      copied: 'Email copied',
     },
     es: {
       title: 'Miguel Gutiérrez García · Desarrollador e Ingeniero de Software',
       description: 'Portfolio de Miguel Gutiérrez García, desarrollador e ingeniero de software. Tecnologías, proyectos, videojuegos y contacto.',
       openMenu: 'Abrir menú',
       closeMenu: 'Cerrar menú',
-      copied: 'Email copiado al portapapeles',
+      copied: 'Email copiado',
     },
   };
   const t = (key) => (STR[root.lang] || STR.en)[key];
 
-  /* ---------- Menú móvil ---------- */
+  /* ---------- Menú (pantalla completa en móvil) ---------- */
   const nav = document.querySelector('[data-nav]');
   const navToggle = document.querySelector('[data-nav-toggle]');
   const setMenu = (open) => {
     nav.classList.toggle('is-open', open);
+    root.style.overflow = open ? 'hidden' : '';
     navToggle.setAttribute('aria-expanded', String(open));
     navToggle.setAttribute('aria-label', t(open ? 'closeMenu' : 'openMenu'));
   };
   navToggle.addEventListener('click', () => setMenu(!nav.classList.contains('is-open')));
   nav.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+  matchMedia('(min-width: 961px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
 
   /* ---------- Idioma (EN por defecto, ES opcional) ---------- */
   const metaDescription = document.querySelector('meta[name="description"]');
@@ -76,7 +78,7 @@
     try { localStorage.setItem('theme', next); } catch (e) {}
   });
 
-  /* ---------- Cabecera con borde al hacer scroll ---------- */
+  /* ---------- Cabecera con fondo al hacer scroll ---------- */
   const header = document.querySelector('[data-header]');
   const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
   onScroll();
@@ -98,11 +100,11 @@
   if (reducedMotion || !('IntersectionObserver' in window)) {
     reveals.forEach((el) => el.classList.add('is-visible'));
   } else {
-    // Escalonado suave para tarjetas hermanas en rejilla
+    // Escalonado suave para elementos hermanos (grupos del stack, filas de proyectos)
     reveals.forEach((el) => {
       const siblings = [...el.parentElement.children].filter((c) => c.classList.contains('reveal'));
       const i = siblings.indexOf(el);
-      if (i > 0) el.style.setProperty('--delay', Math.min(i, 5) * 70 + 'ms');
+      if (i > 0) el.style.setProperty('--delay', Math.min(i, 5) * 80 + 'ms');
     });
     const io = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
