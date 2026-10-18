@@ -341,6 +341,44 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .games__facts dt { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--fg-3); }
 .games__facts dd { font-weight: 600; }
 
+/* Ventanas para mostrar los juegos */
+.showcase { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
+.showcase__item { padding: 0; overflow: hidden; }
+.showcase__window { border-bottom: 1px solid var(--line); background: #161816; }
+.showcase__bar { display: flex; gap: 6px; padding: 10px 14px; border-bottom: 1px solid #262a26; }
+.showcase__bar i { width: 9px; height: 9px; border-radius: 50%; background: #3a3f3a; }
+.showcase__media {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 16 / 9;
+  background:
+    radial-gradient(ellipse at 50% 110%, rgba(134, 197, 172, .18), transparent 60%),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, .03) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, .03) 0 1px, transparent 1px 28px);
+}
+.showcase__media img, .showcase__media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.showcase__play {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 50%;
+  color: #e9e7e2;
+}
+.showcase__play .icon { width: 20px; height: 20px; margin-left: 3px; fill: currentColor; stroke: none; }
+.showcase__soon {
+  position: absolute;
+  bottom: 14px;
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(233, 231, 226, .55);
+}
+.showcase__body { padding: 20px 24px 24px; }
+
 /* ---------- Contact ---------- */
 .contact { max-width: 760px; margin-inline: auto; padding: 56px 32px; text-align: center; }
 .contact__lead { max-width: 50ch; margin: 12px auto 0; color: var(--fg-2); }
@@ -437,7 +475,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 
 @media (max-width: 600px) {
   :root { --pad: 16px; }
-  .skills, .projects { grid-template-columns: 1fr; }
+  .skills, .projects, .showcase { grid-template-columns: 1fr; }
   .card, .project--featured, .games { padding: 20px; }
   .arch li { grid-template-columns: 1fr; gap: 4px; }
   .contact { padding: 40px 20px; }

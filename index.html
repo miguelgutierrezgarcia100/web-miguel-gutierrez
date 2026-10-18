@@ -82,6 +82,7 @@
     <symbol id="i-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6m8 14h8"/></symbol>
     <symbol id="i-test" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></symbol>
     <symbol id="i-gamepad" viewBox="0 0 24 24"><path d="M6 11h4M8 9v4m7-1h.01M18 10h.01"/><path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z"/></symbol>
   </svg>
 
   <a class="skip-link" href="#main"><span lang="en">Skip to content</span><span lang="es">Saltar al contenido</span></a>
@@ -234,10 +235,11 @@
               <li><i class="devicon-sonarqube-original colored"></i>SonarCloud</li>
             </ul>
           </article>
-          <!-- TODO: confirma el motor de tus juegos -->
           <article class="card skill reveal">
             <h3 class="skill__title"><svg class="icon"><use href="#i-gamepad"/></svg><span lang="en">Game development</span><span lang="es">Videojuegos</span></h3>
             <ul class="skill__list">
+              <li><i class="devicon-unrealengine-original"></i>Unreal Engine</li>
+              <li><i class="devicon-cplusplus-plain colored"></i>C++</li>
               <li><i class="devicon-unity-plain"></i>Unity</li>
               <li><i class="devicon-csharp-plain colored"></i>C#</li>
             </ul>
@@ -319,7 +321,6 @@
     </section>
 
     <!-- ============ 03 · VIDEOJUEGOS ============ -->
-    <!-- TODO: cuando tengas capturas o vídeo de los juegos, se pueden añadir aquí -->
     <section class="section section--alt" id="games">
       <div class="wrap">
         <header class="section__head reveal">
@@ -329,16 +330,51 @@
 
         <div class="card games reveal">
           <div class="games__text">
-            <p lang="en">Outside university I design and program my own games, end to end: mechanics, game systems, UI and performance. Two personal projects are in progress and not released yet.</p>
-            <p lang="es">Fuera de la universidad diseño y programo mis propios juegos de principio a fin: mecánicas, sistemas de juego, interfaz y rendimiento. Tengo dos proyectos personales en marcha, aún sin publicar.</p>
-            <p lang="en">It's where I've learned the most about performance, architecture and iterating on feedback.</p>
-            <p lang="es">Es donde más he aprendido sobre rendimiento, arquitectura e iterar a partir del feedback.</p>
+            <p lang="en">Outside university I design and program my own games, end to end. I've built many personal projects, mostly in Unreal Engine with C++, and also in Unity with C#.</p>
+            <p lang="es">Fuera de la universidad diseño y programo mis propios juegos de principio a fin. Tengo muchos proyectos personales, sobre todo en Unreal Engine con C++, y también en Unity con C#.</p>
+            <p lang="en">Along the way I've learned about every area that designing a game involves: mechanics, systems, level design, interface and optimisation.</p>
+            <p lang="es">Con ellos he aprendido sobre todos los ámbitos que conlleva diseñar un juego: mecánicas, sistemas, diseño de niveles, interfaz y optimización.</p>
           </div>
           <dl class="games__facts">
-            <div><dt><span lang="en">Engine</span><span lang="es">Motor</span></dt><dd>Unity · C#</dd></div>
-            <div><dt><span lang="en">Projects</span><span lang="es">Proyectos</span></dt><dd><span lang="en">2 personal</span><span lang="es">2 personales</span></dd></div>
-            <div><dt><span lang="en">Status</span><span lang="es">Estado</span></dt><dd><span lang="en">In development</span><span lang="es">En desarrollo</span></dd></div>
+            <div><dt><span lang="en">Main engine</span><span lang="es">Motor principal</span></dt><dd>Unreal Engine · C++</dd></div>
+            <div><dt><span lang="en">Also</span><span lang="es">También</span></dt><dd>Unity · C#</dd></div>
+            <div><dt><span lang="en">Projects</span><span lang="es">Proyectos</span></dt><dd><span lang="en">Many, personal</span><span lang="es">Muchos, personales</span></dd></div>
           </dl>
+        </div>
+
+        <!-- TODO: para cada juego, cambia título y descripción, y pon una captura, GIF o vídeo en la ventana:
+             <img src="assets/img/juegos/nombre.jpg" alt="...">  o  <video src="assets/video/nombre.mp4" autoplay muted loop playsinline></video> -->
+        <div class="showcase">
+          <article class="card showcase__item reveal">
+            <div class="showcase__window">
+              <div class="showcase__bar"><i></i><i></i><i></i></div>
+              <div class="showcase__media">
+                <span class="showcase__play"><svg class="icon"><use href="#i-play"/></svg></span>
+                <span class="showcase__soon"><span lang="en">Gameplay coming soon</span><span lang="es">Gameplay próximamente</span></span>
+              </div>
+            </div>
+            <div class="showcase__body">
+              <p class="project__kicker">Unreal Engine · C++</p>
+              <h3 class="project__title"><span lang="en">Unreal Engine project</span><span lang="es">Proyecto en Unreal Engine</span></h3>
+              <p class="project__desc" lang="en">Screenshots, gameplay and details coming soon.</p>
+              <p class="project__desc" lang="es">Capturas, gameplay y detalles próximamente.</p>
+            </div>
+          </article>
+          <article class="card showcase__item reveal">
+            <div class="showcase__window">
+              <div class="showcase__bar"><i></i><i></i><i></i></div>
+              <div class="showcase__media">
+                <span class="showcase__play"><svg class="icon"><use href="#i-play"/></svg></span>
+                <span class="showcase__soon"><span lang="en">Gameplay coming soon</span><span lang="es">Gameplay próximamente</span></span>
+              </div>
+            </div>
+            <div class="showcase__body">
+              <p class="project__kicker">Unity · C#</p>
+              <h3 class="project__title"><span lang="en">Unity project</span><span lang="es">Proyecto en Unity</span></h3>
+              <p class="project__desc" lang="en">Screenshots, gameplay and details coming soon.</p>
+              <p class="project__desc" lang="es">Capturas, gameplay y detalles próximamente.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
