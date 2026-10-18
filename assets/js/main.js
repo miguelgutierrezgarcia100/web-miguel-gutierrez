@@ -5,15 +5,15 @@
   /* ---------- Textos que genera JavaScript ---------- */
   const STR = {
     en: {
-      title: 'Miguel Gutiérrez García · Software Engineer',
-      description: 'Portfolio of Miguel Gutiérrez García, software engineer. Projects, skills, game development and contact.',
+      title: 'Miguel Gutiérrez García · Software Developer & Engineer',
+      description: 'Portfolio of Miguel Gutiérrez García, software developer and engineer. Skills, projects, game development and contact.',
       openMenu: 'Open menu',
       closeMenu: 'Close menu',
       copied: 'Email copied to clipboard',
     },
     es: {
-      title: 'Miguel Gutiérrez García · Ingeniero de Software',
-      description: 'Portfolio de Miguel Gutiérrez García, ingeniero de software. Proyectos, tecnologías, desarrollo de videojuegos y contacto.',
+      title: 'Miguel Gutiérrez García · Desarrollador e Ingeniero de Software',
+      description: 'Portfolio de Miguel Gutiérrez García, desarrollador e ingeniero de software. Tecnologías, proyectos, videojuegos y contacto.',
       openMenu: 'Abrir menú',
       closeMenu: 'Cerrar menú',
       copied: 'Email copiado al portapapeles',
@@ -112,22 +112,6 @@
       });
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
     reveals.forEach((el) => io.observe(el));
-  }
-
-  /* ---------- Rotador de palabras en el hero (uno por idioma) ---------- */
-  if (!reducedMotion) {
-    document.querySelectorAll('[data-rotator]').forEach((rotator) => {
-      const words = JSON.parse(rotator.dataset.rotator);
-      let i = 0;
-      setInterval(() => {
-        rotator.classList.add('is-out');
-        setTimeout(() => {
-          i = (i + 1) % words.length;
-          rotator.textContent = words[i];
-          rotator.classList.remove('is-out');
-        }, 300);
-      }, 2800);
-    });
   }
 
   /* ---------- Copiar email ---------- */

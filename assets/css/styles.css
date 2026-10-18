@@ -450,19 +450,12 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 }
 
 .hero__role {
-  margin-top: 20px;
-  font-size: clamp(1.15rem, 1rem + .6vw, 1.45rem);
-  font-weight: 500;
-  letter-spacing: -0.015em;
-  color: var(--text);
-}
-.hero__sep { margin-inline: 8px; color: var(--text-faint); font-weight: 400; }
-.rotator {
-  display: inline-block;
+  margin-top: 18px;
+  font-size: clamp(1.3rem, 1rem + 1vw, 1.75rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
   color: var(--accent);
-  transition: opacity .3s, transform .3s;
 }
-.rotator.is-out { opacity: 0; transform: translateY(6px); }
 
 .hero__lead {
   margin-top: 22px;
