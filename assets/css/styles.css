@@ -358,32 +358,6 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .hero__lead { max-width: 38ch; font-size: clamp(1.1rem, .95rem + .55vw, 1.4rem); line-height: 1.45; color: var(--fg-2); }
 .hero__cta { display: flex; flex-wrap: wrap; gap: 10px; }
 
-/* ---------- Marquee ---------- */
-.marquee {
-  overflow: hidden;
-  width: 104%;
-  margin-left: -2%;
-  background: var(--accent);
-  color: var(--on-accent);
-  border-block: 1px solid var(--on-accent);
-  transform: rotate(-1.4deg);
-}
-.marquee__track { display: flex; width: max-content; animation: marquee 38s linear infinite; }
-.marquee:hover .marquee__track { animation-play-state: paused; }
-.marquee span {
-  display: inline-flex;
-  align-items: center;
-  padding: 14px 0;
-  font-size: clamp(1.5rem, 3vw, 2.6rem);
-  font-weight: 700;
-  font-stretch: 80%;
-  text-transform: uppercase;
-  letter-spacing: -0.01em;
-  line-height: 1;
-}
-.marquee span::after { content: "✦"; margin: 0 .55em; font-size: .55em; }
-@keyframes marquee { to { transform: translateX(-50%); } }
-
 /* ---------- Sections ---------- */
 .section { padding-block: clamp(80px, 10vw, 150px); }
 .section--alt { background: var(--bg-alt); }
@@ -592,30 +566,6 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 }
 .footer__top { display: inline-flex; align-items: center; gap: 8px; transition: color .2s; }
 .footer__top:hover { color: var(--accent); }
-
-/* ---------- Progress, clock & cursor label ---------- */
-.progress { position: fixed; inset: 0 0 auto; z-index: 60; height: 3px; pointer-events: none; }
-.progress span { display: block; height: 100%; background: var(--accent); transform: scaleX(0); transform-origin: left; }
-
-.hero__clock:not(:empty)::before { content: "·"; margin: 0 .6em; color: var(--fg-3); }
-
-.cursor { position: fixed; left: 0; top: 0; z-index: 120; pointer-events: none; will-change: transform; }
-.cursor__pill {
-  display: block;
-  padding: 10px 16px;
-  border-radius: 999px;
-  background: var(--fg);
-  color: var(--bg);
-  font-family: var(--mono);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  white-space: nowrap;
-  opacity: 0;
-  transform: scale(.5);
-  transition: opacity .25s, transform .35s var(--ease);
-}
-.cursor.is-active .cursor__pill { opacity: 1; transform: scale(1); }
 
 /* ---------- Toast ---------- */
 .toast {
