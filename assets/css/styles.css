@@ -474,15 +474,6 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   margin-top: 36px;
 }
 .socials { display: flex; gap: 8px; }
-.hero__divider { width: 1px; height: 24px; background: var(--border-strong); }
-.hero__location {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14.5px;
-  color: var(--text-muted);
-}
-.hero__location .icon { width: 16px; height: 16px; }
 
 /* Avatar */
 .hero__top {
@@ -595,66 +586,34 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   50% { transform: translateY(-8px); }
 }
 
-/* ---------- About ---------- */
-.about {
-  display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-  gap: 64px;
-  align-items: start;
-}
-.about__text { display: grid; gap: 20px; font-size: 17.5px; color: var(--text-muted); }
-.about__text .about__intro { color: var(--text); font-size: 19px; }
-
-.facts {
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  background: var(--bg-elev);
-  box-shadow: var(--shadow-sm);
-  overflow: hidden;
-}
-.facts__row {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 16px;
-  padding: 16px 22px;
-  font-size: 15px;
-}
-.facts__row + .facts__row { border-top: 1px solid var(--border); }
-.facts dt {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--text-faint);
-}
-.facts dt .icon { width: 16px; height: 16px; color: var(--accent); }
-.facts dd { color: var(--text); font-weight: 500; }
-
-.values {
+/* ---------- Hero facts ---------- */
+.hero-facts {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 72px;
-}
-.value {
-  padding: 26px 24px;
+  margin-top: 80px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--bg-elev);
-  transition: border-color .25s, transform .25s, box-shadow .25s;
+  box-shadow: var(--shadow-sm);
 }
-.value:hover { border-color: var(--border-strong); transform: translateY(-3px); box-shadow: var(--shadow-md); }
-.value__icon {
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  margin-bottom: 18px;
-  border-radius: 10px;
-  background: var(--accent-soft);
-  color: var(--accent);
+.hero-facts > div { padding: 18px 22px; }
+.hero-facts > div + div { border-left: 1px solid var(--border); }
+.hero-facts dt {
+  margin-bottom: 6px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--text-faint);
 }
-.value h3 { font-size: 17px; margin-bottom: 8px; letter-spacing: -0.015em; }
-.value p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
+.hero-facts dd { font-size: 15px; font-weight: 600; line-height: 1.4; }
+.hero-facts small {
+  display: block;
+  margin-top: 2px;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
 
 /* ---------- Skills ---------- */
 .skills {
@@ -992,23 +951,6 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 
 .game__links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
 
-.learnings {
-  margin-top: 28px;
-  padding: 30px;
-  border-radius: var(--radius-lg);
-  border: 1px dashed var(--border-strong);
-}
-.learnings__title {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  color: var(--text-faint);
-  margin-bottom: 20px;
-}
-.learnings ul { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
-.learnings li { font-size: 14.5px; color: var(--text-muted); line-height: 1.55; }
-.learnings strong { display: block; margin-bottom: 4px; font-size: 15.5px; color: var(--text); font-weight: 600; }
 
 /* ---------- Contact ---------- */
 .contact {
@@ -1053,48 +995,6 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 .email-box .is-copied .icon--done { display: block; }
 
 .contact__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 28px; }
-
-/* ---------- Interests ---------- */
-.section.section--flush-bottom { padding-bottom: 56px; }
-.interests { padding-bottom: 96px; }
-.interests__inner {
-  max-width: 880px;
-  margin-inline: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px 28px;
-  font-size: 14.5px;
-  color: var(--text-muted);
-}
-.interests__label {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  color: var(--text-faint);
-}
-.interests__list { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 28px; }
-.interests__list li { display: flex; align-items: center; gap: 10px; }
-.interests__list strong { color: var(--text); font-weight: 600; }
-.interests__icon {
-  display: grid;
-  place-items: center;
-  flex: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--bg-elev);
-  color: var(--text-muted);
-}
-.interests__icon .icon { width: 16px; height: 16px; }
-.interests__icon--glyph {
-  font-size: 18px;
-  line-height: 1;
-  font-family: "Segoe UI Symbol", "Apple Symbols", "Noto Sans Symbols 2", "DejaVu Sans", sans-serif;
-}
 
 /* ---------- Footer ---------- */
 .footer { padding-block: 32px; border-top: 1px solid var(--border); }
@@ -1158,11 +1058,12 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
 /* ---------- Responsive ---------- */
 @media (max-width: 1080px) {
   .nav a { padding: 8px 9px; font-size: 14px; }
-  .values { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .skills { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .project--featured .project__body { padding: 32px; }
-  .learnings ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-facts > div:nth-child(3) { border-left: 0; }
+  .hero-facts > div:nth-child(n + 3) { border-top: 1px solid var(--border); }
   .float-pill { right: -12px; }
 }
 
@@ -1194,7 +1095,6 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   .hero__grid { grid-template-columns: 1fr; gap: 56px; }
   .hero__visual { justify-self: start; }
 
-  .about { grid-template-columns: 1fr; gap: 40px; }
   .project--featured { grid-template-columns: 1fr; }
   .project--featured .project__cover { min-height: 0; aspect-ratio: 16 / 9; border-right: 0; border-bottom: 1px solid var(--border); }
   .game, .game--reverse { grid-template-columns: 1fr; }
@@ -1217,12 +1117,9 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   .float-pill { right: 8px; top: -22px; padding: 8px 12px 8px 8px; }
   .float-pill__icon { width: 32px; height: 32px; }
   .hero__cta .btn { flex: 1; }
-  .hero__divider { display: none; }
-  .values, .skills, .projects { grid-template-columns: 1fr; }
-  .values { margin-top: 48px; }
-  .facts__row { grid-template-columns: 1fr; gap: 4px; padding: 14px 18px; }
-  .about__text { font-size: 16.5px; }
-  .about__text .about__intro { font-size: 17.5px; }
+  .skills, .projects { grid-template-columns: 1fr; }
+  .hero-facts { margin-top: 56px; }
+  .hero-facts > div { padding: 14px 16px; }
   .timeline::before { left: 17px; }
   .timeline__item { grid-template-columns: 36px 1fr; gap: 14px; }
   .timeline__dot { width: 36px; height: 36px; border-radius: 10px; }
@@ -1231,12 +1128,6 @@ button { font: inherit; color: inherit; cursor: pointer; background: none; borde
   .project--featured .project__body, .game__body { padding: 24px; }
   .project--featured h3, .game__body h3 { font-size: 22px; }
   .game__meta { grid-template-columns: 1fr 1fr; }
-  .learnings { padding: 22px; }
-  .learnings ul { grid-template-columns: 1fr; gap: 18px; }
-  .section.section--flush-bottom { padding-bottom: 40px; }
-  .interests { padding-bottom: 64px; }
-  .interests__inner, .interests__list { flex-direction: column; align-items: flex-start; }
-  .interests__list li { align-items: flex-start; }
   .contact { padding: 48px 20px; border-radius: 22px; }
   .email-box { padding-left: 14px; }
   .contact__actions .btn { flex: 1 1 calc(50% - 10px); }
