@@ -138,6 +138,39 @@
     });
   });
 
+  /* ---------- Hora local (Oviedo) ---------- */
+  const clock = document.querySelector('[data-clock]');
+  if (clock) {
+    const fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Madrid', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' });
+    const tick = () => { clock.textContent = fmt.format(new Date()); };
+    tick();
+    setInterval(tick, 15000);
+  }
+
+  /* ---------- Barra de progreso de lectura ---------- */
+  const progress = document.querySelector('[data-progress]');
+  let progressFrame = 0;
+  const updateProgress = () => {
+    progressFrame = 0;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.transform = `scaleX(${max > 0 ? Math.min(window.scrollY / max, 1) : 0})`;
+  };
+  updateProgress();
+  window.addEventListener('scroll', () => { if (!progressFrame) progressFrame = requestAnimationFrame(updateProgress); }, { passive: true });
+  window.addEventListener('resize', updateProgress);
+
+  /* ---------- Etiqueta que sigue al cursor en los proyectos ---------- */
+  const cursor = document.querySelector('[data-cursor-label]');
+  if (cursor && matchMedia('(hover: hover) and (pointer: fine)').matches && !reducedMotion) {
+    window.addEventListener('pointermove', (e) => {
+      cursor.style.transform = `translate3d(${e.clientX + 18}px, ${e.clientY + 18}px, 0)`;
+    }, { passive: true });
+    document.querySelectorAll('[data-cursor]').forEach((el) => {
+      el.addEventListener('pointerenter', () => cursor.classList.add('is-active'));
+      el.addEventListener('pointerleave', () => cursor.classList.remove('is-active'));
+    });
+  }
+
   /* ---------- Año del pie ---------- */
   const year = document.querySelector('[data-year]');
   if (year) year.textContent = new Date().getFullYear();

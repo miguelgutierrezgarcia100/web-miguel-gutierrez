@@ -75,6 +75,8 @@
     <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
   </svg>
 
+  <div class="progress" aria-hidden="true"><span data-progress></span></div>
+
   <a class="skip-link" href="#main"><span lang="en">Skip to content</span><span lang="es">Saltar al contenido</span></a>
 
   <!-- ============ CABECERA ============ -->
@@ -117,7 +119,7 @@
       <div class="wrap">
         <div class="hero__meta">
           <p class="hero__status"><span class="pulse"></span><span lang="en">Open to work</span><span lang="es">Disponible para trabajar</span></p>
-          <p class="hero__place"><span lang="en">Oviedo, Spain</span><span lang="es">Oviedo, España</span></p>
+          <p class="hero__place"><span lang="en">Oviedo, Spain</span><span lang="es">Oviedo, España</span><span class="hero__clock" data-clock></span></p>
         </div>
 
         <h1 class="hero__name" aria-label="Miguel Gutiérrez García">
@@ -400,6 +402,11 @@
       </footer>
     </section>
   </main>
+
+  <!-- Etiqueta que sigue al cursor sobre los proyectos (solo con ratón) -->
+  <div class="cursor" aria-hidden="true" data-cursor-label>
+    <span class="cursor__pill"><span lang="en">View code</span><span lang="es">Ver código</span> ↗</span>
+  </div>
 
   <div class="toast" role="status" aria-live="polite" data-toast></div>
 </body>
