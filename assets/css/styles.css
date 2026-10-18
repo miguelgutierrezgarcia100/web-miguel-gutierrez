@@ -342,17 +342,6 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .games__facts dt { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--fg-3); }
 .games__facts dd { font-weight: 600; }
 
-/* ---------- Education ---------- */
-.edu { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 20px; padding: 28px; }
-.edu__icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 8px; background: var(--accent-soft); color: var(--accent); }
-.edu__icon .icon { width: 20px; height: 20px; }
-.edu__head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
-.edu__head h3 { font-size: 1.2rem; font-weight: 600; line-height: 1.35; }
-.edu__date { flex: none; font-family: var(--mono); font-size: 13px; color: var(--fg-3); }
-.edu__org { margin-top: 2px; font-weight: 500; color: var(--accent); }
-.edu__desc { max-width: 70ch; margin-top: 10px; color: var(--fg-2); }
-.edu .tags { margin-top: 16px; }
-
 /* ---------- Contact ---------- */
 .contact { max-width: 760px; margin-inline: auto; padding: 56px 32px; text-align: center; }
 .contact__lead { max-width: 50ch; margin: 12px auto 0; color: var(--fg-2); }
@@ -450,9 +439,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 @media (max-width: 600px) {
   :root { --pad: 16px; }
   .skills, .projects { grid-template-columns: 1fr; }
-  .card, .project--featured, .games, .edu { padding: 20px; }
-  .edu { grid-template-columns: 1fr; gap: 14px; }
-  .edu__head { flex-direction: column; gap: 0; }
+  .card, .project--featured, .games { padding: 20px; }
   .arch li { grid-template-columns: 1fr; gap: 4px; }
   .contact { padding: 40px 20px; }
   .contact__mail { padding-left: 12px; }
