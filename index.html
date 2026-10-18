@@ -142,9 +142,13 @@
       <div class="hero__bg" aria-hidden="true"></div>
       <div class="container hero__grid">
         <div class="hero__content">
-          <p class="status reveal"><span class="status__dot"></span>
-            <span lang="en">Open to new opportunities</span><span lang="es">Disponible para nuevas oportunidades</span>
-          </p>
+          <div class="hero__top reveal">
+            <img class="avatar" src="assets/img/miguel.jpg" width="160" height="160" data-l10n alt="Photo of Miguel Gutiérrez García"
+                 data-en-alt="Photo of Miguel Gutiérrez García" data-es-alt="Foto de Miguel Gutiérrez García">
+            <p class="status"><span class="status__dot"></span>
+              <span lang="en">Open to new opportunities</span><span lang="es">Disponible para nuevas oportunidades</span>
+            </p>
+          </div>
 
           <h1 class="hero__title reveal">
             <span class="hero__hello"><span lang="en">Hi, I'm</span><span lang="es">Hola, soy</span></span>
@@ -191,14 +195,6 @@
         </div>
 
         <div class="hero__visual reveal">
-          <div class="portrait">
-            <!-- TODO: guarda tu foto como assets/img/miguel.jpg (vertical, ~800×1000 px). Mientras no exista se muestran tus iniciales. -->
-            <img src="assets/img/miguel.jpg" width="800" height="1000" data-l10n alt="Photo of Miguel Gutiérrez García"
-                 data-en-alt="Photo of Miguel Gutiérrez García" data-es-alt="Foto de Miguel Gutiérrez García"
-                 onerror="this.parentElement.classList.add('portrait--fallback'); this.remove();">
-            <span class="portrait__fallback" aria-hidden="true">MG</span>
-          </div>
-
           <figure class="code-card" aria-hidden="true">
             <div class="code-card__bar"><i></i><i></i><i></i><span>miguel.ts</span></div>
 <pre lang="en"><code><span class="tk-k">const</span> <span class="tk-v">miguel</span> = {
