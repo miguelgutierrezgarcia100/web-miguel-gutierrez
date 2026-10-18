@@ -5,15 +5,15 @@
   /* ---------- Textos que genera JavaScript ---------- */
   const STR = {
     en: {
-      title: 'Miguel Gutiérrez García · Software Developer & Engineer',
-      description: 'Miguel Gutiérrez García, software developer and engineer. Stack, projects, game development and contact.',
+      title: 'Miguel Gutiérrez García · Software Engineer & Developer',
+      description: 'Miguel Gutiérrez García, software engineer and developer. Stack, projects, game development and contact.',
       openMenu: 'Open menu',
       closeMenu: 'Close menu',
       copied: 'Email copied',
     },
     es: {
-      title: 'Miguel Gutiérrez García · Desarrollador e Ingeniero de Software',
-      description: 'Miguel Gutiérrez García, desarrollador e ingeniero de software. Tecnologías, proyectos, videojuegos y contacto.',
+      title: 'Miguel Gutiérrez García · Ingeniero y Desarrollador de Software',
+      description: 'Miguel Gutiérrez García, ingeniero y desarrollador de software. Tecnologías, proyectos, videojuegos y contacto.',
       openMenu: 'Abrir menú',
       closeMenu: 'Cerrar menú',
       copied: 'Email copiado',
