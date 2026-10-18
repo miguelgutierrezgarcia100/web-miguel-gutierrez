@@ -1,6 +1,6 @@
 # Miguel Gutiérrez García · Portfolio
 
-Personal portfolio of **Miguel Gutiérrez García**, software developer & engineer.
+Personal portfolio of **Miguel Gutiérrez García**, software engineer & developer.
 
 **Live site:** https://miguelgutierrezgarcia100.github.io/web-miguel-gutierrez/
 
