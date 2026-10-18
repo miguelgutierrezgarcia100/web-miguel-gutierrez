@@ -5,21 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Page not found · Miguel Gutiérrez García</title>
   <meta name="robots" content="noindex">
-  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
   <script>
     (function () {
+      // En github.io la web vive en /web-miguel-gutierrez/; con dominio propio, en la raíz
+      var base = document.createElement('base');
+      base.href = /\.github\.io$/.test(location.hostname) ? '/web-miguel-gutierrez/' : '/';
+      document.head.appendChild(base);
+
       var root = document.documentElement, t = null, l = null;
-      try { l = localStorage.getItem('lang'); t = localStorage.getItem('theme'); } catch (e) {}
+      try { l = new URLSearchParams(location.search).get('lang'); } catch (e) {}
+      if (l !== 'en' && l !== 'es') { try { l = localStorage.getItem('lang'); } catch (e) {} }
       root.lang = l === 'es' ? 'es' : 'en';
       if (root.lang === 'es') document.title = 'Página no encontrada · Miguel Gutiérrez García';
+      try { t = localStorage.getItem('theme'); } catch (e) {}
       if (t !== 'light' && t !== 'dark') t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       root.dataset.theme = t;
     })();
   </script>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <main class="notfound">
@@ -28,7 +35,7 @@
       <h1><span lang="en">This page doesn't exist.</span><span lang="es">Esta página no existe.</span></h1>
       <p lang="en">The link may be mistyped, or the page may have moved.</p>
       <p lang="es">Puede que el enlace esté mal escrito o que la página se haya movido.</p>
-      <a class="btn btn--primary" href="/"><span lang="en">Back to home</span><span lang="es">Volver al inicio</span></a>
+      <a class="btn btn--primary" href="./"><span lang="en">Back to home</span><span lang="es">Volver al inicio</span></a>
     </div>
   </main>
 </body>

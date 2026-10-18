@@ -2,7 +2,7 @@
 
 Personal portfolio of **Miguel Gutiérrez García**, software developer & engineer.
 
-**Live site:** https://miguelgutierrezgarcia100.github.io
+**Live site:** https://miguelgutierrezgarcia100.github.io/web-miguel-gutierrez/
 
 ## Features
 
