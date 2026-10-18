@@ -330,16 +330,16 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   white-space: nowrap;
 }
 
-/* ---------- Games ---------- */
-.games { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 40px; padding: 32px; }
-.games__text p { color: var(--fg-2); }
-.games__text p:first-child { font-size: 1.08rem; color: var(--fg); }
-.games__text p + p { margin-top: 12px; }
-.games__facts { padding-left: 32px; border-left: 1px solid var(--line); }
-.games__facts > div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-block: 10px; border-bottom: 1px solid var(--line); }
-.games__facts > div:last-child { border-bottom: 0; }
-.games__facts dt { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--fg-3); }
-.games__facts dd { font-weight: 600; }
+/* ---------- Texto + datos (videojuegos, sobre mí) ---------- */
+.split { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 40px; padding: 32px; }
+.split__text { display: flex; flex-direction: column; gap: 12px; }
+.split__text p { color: var(--fg-2); }
+.split__text p:nth-child(-n + 2) { font-size: 1.08rem; color: var(--fg); }
+.split__facts { padding-left: 32px; border-left: 1px solid var(--line); }
+.split__facts > div { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding-block: 10px; border-bottom: 1px solid var(--line); }
+.split__facts > div:last-child { border-bottom: 0; }
+.split__facts dt { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--fg-3); }
+.split__facts dd { font-weight: 600; }
 
 /* Ventanas para mostrar los juegos */
 .showcase { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 16px; }
@@ -469,14 +469,14 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   .hero { padding-top: 48px; padding-bottom: 56px; }
   .section { padding-block: 72px; }
   .section__head--row { flex-direction: column; align-items: flex-start; }
-  .games { grid-template-columns: 1fr; gap: 24px; }
-  .games__facts { padding: 16px 0 0; border-left: 0; border-top: 1px solid var(--line); }
+  .split { grid-template-columns: 1fr; gap: 24px; }
+  .split__facts { padding: 16px 0 0; border-left: 0; border-top: 1px solid var(--line); }
 }
 
 @media (max-width: 600px) {
   :root { --pad: 16px; }
   .skills, .projects, .showcase { grid-template-columns: 1fr; }
-  .card, .project--featured, .games { padding: 20px; }
+  .card, .project--featured, .split { padding: 20px; }
   .arch li { grid-template-columns: 1fr; gap: 4px; }
   .contact { padding: 40px 20px; }
   .contact__mail { padding-left: 12px; }
