@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Miguel Gutiérrez García · Software Engineer &amp; Developer</title>
-  <meta name="description" content="Miguel Gutiérrez García, software engineer and developer. Stack, projects, game development and contact.">
+  <meta name="description" content="Miguel Gutiérrez García, software engineer and full stack developer. Projects, technologies, game development and contact.">
   <meta name="author" content="Miguel Gutiérrez García">
   <meta name="theme-color" content="#f7f6f2" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)">
@@ -18,7 +18,7 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_ES">
   <meta property="og:title" content="Miguel Gutiérrez García · Software Engineer &amp; Developer">
-  <meta property="og:description" content="Software engineer and developer. Backend, web and game development.">
+  <meta property="og:description" content="Software engineer and full stack developer. Software projects and game development.">
   <meta name="twitter:card" content="summary">
 
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
@@ -49,7 +49,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Miguel Gutiérrez García",
-    "jobTitle": "Software Engineer & Developer",
+    "jobTitle": "Software Engineer & Full Stack Developer",
     "email": "mailto:miguelgutierrezgarcia100@gmail.com",
     "address": { "@type": "PostalAddress", "addressLocality": "Oviedo", "addressCountry": "ES" },
     "alumniOf": "Universidad de Oviedo",
@@ -156,7 +156,7 @@
           </div>
           <div>
             <dt><span lang="en">Focus</span><span lang="es">Enfoque</span></dt>
-            <dd><span lang="en">Backend &amp; web development</span><span lang="es">Desarrollo backend y web</span>
+            <dd><span lang="en">Full stack development</span><span lang="es">Desarrollo full stack</span>
               <small><span lang="en">Plus game development</span><span lang="es">Y desarrollo de videojuegos</span></small></dd>
           </div>
           <div>
@@ -329,53 +329,55 @@
           <h2 class="section__title"><span lang="en">Game development.</span><span lang="es">Desarrollo de videojuegos.</span></h2>
         </header>
 
-        <div class="card split reveal">
-          <div class="split__text">
-            <p lang="en">Outside university I design and program my own games, end to end. I've built many personal projects, mostly in Unreal Engine with C++, and also in Unity with C#.</p>
-            <p lang="es">Fuera de la universidad diseño y programo mis propios juegos de principio a fin. Tengo muchos proyectos personales, sobre todo en Unreal Engine con C++, y también en Unity con C#.</p>
-            <p lang="en">Along the way I've learned about every area that designing a game involves: mechanics, systems, level design, interface and optimisation.</p>
-            <p lang="es">Con ellos he aprendido sobre todos los ámbitos que conlleva diseñar un juego: mecánicas, sistemas, diseño de niveles, interfaz y optimización.</p>
-          </div>
-          <dl class="split__facts">
-            <div><dt><span lang="en">Main engine</span><span lang="es">Motor principal</span></dt><dd>Unreal Engine · C++</dd></div>
-            <div><dt><span lang="en">Also</span><span lang="es">También</span></dt><dd>Unity · C#</dd></div>
-            <div><dt><span lang="en">Projects</span><span lang="es">Proyectos</span></dt><dd><span lang="en">Many, personal</span><span lang="es">Muchos, personales</span></dd></div>
-          </dl>
+        <div class="game-intro reveal">
+          <p lang="en">Outside university I design and program my own games, end to end. Along the way I've learned about mechanics, systems, level design, interfaces and optimisation.</p>
+          <p lang="es">Fuera de la universidad diseño y programo mis propios juegos de principio a fin. Con ellos he aprendido sobre mecánicas, sistemas, diseño de niveles, interfaces y optimización.</p>
         </div>
 
-        <!-- TODO: para cada juego, cambia título y descripción, y pon una captura, GIF o vídeo en la ventana:
-             <img src="assets/img/juegos/nombre.jpg" alt="...">  o  <video src="assets/video/nombre.mp4" autoplay muted loop playsinline></video> -->
+        <!-- Blindspot: añade src y poster a su <video> cuando esté listo el tráiler.
+             El aviso se oculta automáticamente al añadir src. -->
         <div class="showcase">
-          <article class="card showcase__item reveal">
-            <div class="showcase__window">
-              <div class="showcase__bar"><i></i><i></i><i></i></div>
-              <div class="showcase__media">
-                <span class="showcase__play"><svg class="icon"><use href="#i-play"/></svg></span>
-                <span class="showcase__soon"><span lang="en">Gameplay coming soon</span><span lang="es">Gameplay próximamente</span></span>
+          <figure class="card showcase__item reveal">
+            <div class="showcase__media">
+              <video class="showcase__video" src="assets/video/iesoccer-trailer-web.mp4" poster="assets/img/iesoccer-poster.jpg"
+                     controls playsinline preload="none" data-l10n
+                     aria-label="IE / SOCCER gameplay trailer" data-en-aria-label="IE / SOCCER gameplay trailer" data-es-aria-label="Tráiler de gameplay de IE / SOCCER"></video>
+            </div>
+            <figcaption class="showcase__caption">
+              <div class="showcase__heading">
+                <h3 class="showcase__title">IE / SOCCER</h3>
+                <span class="showcase__status">Gameplay</span>
+              </div>
+              <p class="showcase__description" lang="en">Arcade football with custom physics and procedural animation: dribbles, passes and chainable supertechniques, with opponents that react to every play.</p>
+              <p class="showcase__description" lang="es">Fútbol arcade con físicas propias y animación procedural: regates, pases y supertécnicas encadenables, con rivales que reaccionan a cada jugada.</p>
+            </figcaption>
+          </figure>
+          <figure class="card showcase__item showcase__item--upcoming reveal">
+            <div class="showcase__media">
+              <video class="showcase__video" controls playsinline preload="none" data-l10n
+                     aria-label="Blindspot gameplay trailer" data-en-aria-label="Blindspot gameplay trailer" data-es-aria-label="Tráiler de gameplay de Blindspot"></video>
+              <div class="showcase__placeholder showcase__placeholder--upcoming">
+                <svg class="showcase__mystery" viewBox="0 0 200 112" fill="none" aria-hidden="true">
+                  <path d="M73 94V18h54v76M86 94V29l28-6v71" stroke="currentColor" stroke-width="1.5" opacity=".45"/>
+                  <path d="M26 96h148" stroke="currentColor" opacity=".25"/>
+                  <circle cx="51" cy="64" r="6" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M42 91V82a9 9 0 0 1 18 0v9" stroke="currentColor" stroke-width="1.5"/>
+                  <circle cx="149" cy="64" r="6" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="M140 91V82a9 9 0 0 1 18 0v9" stroke="currentColor" stroke-width="1.5"/>
+                  <path d="m95 48 4 1m6 0 4-1" stroke="#bf7c75" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="showcase__soon"><span lang="en">Coming soon</span><span lang="es">Próximamente</span></span>
               </div>
             </div>
-            <div class="showcase__body">
-              <p class="project__kicker">Unreal Engine · C++</p>
-              <h3 class="project__title"><span lang="en">Unreal Engine project</span><span lang="es">Proyecto en Unreal Engine</span></h3>
-              <p class="project__desc" lang="en">Screenshots, gameplay and details coming soon.</p>
-              <p class="project__desc" lang="es">Capturas, gameplay y detalles próximamente.</p>
-            </div>
-          </article>
-          <article class="card showcase__item reveal">
-            <div class="showcase__window">
-              <div class="showcase__bar"><i></i><i></i><i></i></div>
-              <div class="showcase__media">
-                <span class="showcase__play"><svg class="icon"><use href="#i-play"/></svg></span>
-                <span class="showcase__soon"><span lang="en">Gameplay coming soon</span><span lang="es">Gameplay próximamente</span></span>
+            <figcaption class="showcase__caption">
+              <div class="showcase__heading">
+                <h3 class="showcase__title">Blindspot</h3>
+                <span class="showcase__status"><span lang="en">In development</span><span lang="es">En desarrollo</span></span>
               </div>
-            </div>
-            <div class="showcase__body">
-              <p class="project__kicker">Unity · C#</p>
-              <h3 class="project__title"><span lang="en">Unity project</span><span lang="es">Proyecto en Unity</span></h3>
-              <p class="project__desc" lang="en">Screenshots, gameplay and details coming soon.</p>
-              <p class="project__desc" lang="es">Capturas, gameplay y detalles próximamente.</p>
-            </div>
-          </article>
+              <p class="showcase__description" lang="en">Two players, a creature lurking in the dark, and one way out: work together and solve the puzzles before it finds you.</p>
+              <p class="showcase__description" lang="es">Dos jugadores, una criatura que los acecha en la oscuridad y una única salida: cooperar y resolver puzles antes de que los encuentre.</p>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -388,20 +390,17 @@
           <h2 class="section__title"><span lang="en">Beyond the code.</span><span lang="es">Más allá del código.</span></h2>
         </header>
 
-        <div class="card split reveal">
+        <div class="card split split--single reveal">
           <div class="split__text">
-            <p lang="en">I've loved software development since I was young, and above all programming itself: taking a problem apart and finding the cleanest way to solve it. Throughout my degree I kept refining that, and the advances in AI have let me aim for more ambitious projects with far more powerful tools.</p>
-            <p lang="es">Me gusta el desarrollo de software desde pequeño y, sobre todo, la programación en sí: desmontar un problema y encontrar la forma más limpia de resolverlo. A lo largo de la carrera lo fui puliendo, y los avances de la inteligencia artificial me han permitido apuntar a proyectos más ambiciosos con herramientas mucho más potentes.</p>
-            <p lang="en">I've always been drawn to the optimal solution: the shortest route between two places, solving a problem in the fewest steps, a Rubik's cube. That same instinct took me to chess. I played at a club for a while and reached an upper-intermediate level.</p>
-            <p lang="es">Siempre me ha atraído la solución óptima: el camino más corto entre dos sitios, resolver un problema con el menor número de pasos, un cubo de Rubik. Ese mismo instinto me llevó al ajedrez: estuve un tiempo en un club y alcancé un nivel medio-alto.</p>
-            <p lang="en">And when I'm away from the keyboard, I love travelling.</p>
-            <p lang="es">Y cuando no estoy delante del teclado, me encanta viajar.</p>
+            <p lang="en">I'm currently studying for a degree in Software Engineering at the University of Oviedo while working on personal projects in full stack and game development.</p>
+            <p lang="es">Actualmente estudio el Grado en Ingeniería Informática del Software en la Universidad de Oviedo y compagino la carrera con proyectos propios de desarrollo full stack y videojuegos.</p>
+            <p lang="en">I started programming around 2018 because I loved video games and wanted to make my own. Since then, I've built countless prototypes and a few finished games, learning to design and program them from start to finish.</p>
+            <p lang="es">Empecé a programar hacia 2018, por mi interés en los videojuegos y las ganas de crear los míos. Desde entonces he desarrollado innumerables prototipos y algunos juegos completos, aprendiendo a diseñarlos y programarlos de principio a fin.</p>
+            <p lang="en">Later, a programming class in secondary school caught my interest like no other subject had. That experience led me to study Software Engineering.</p>
+            <p lang="es">Más tarde, en el instituto, cursé una asignatura de programación que me enganchó como ninguna otra. Fue entonces cuando decidí estudiar Ingeniería del Software.</p>
+            <p lang="en">I also play chess at a club, at an upper-intermediate level.</p>
+            <p lang="es">También juego al ajedrez en un club, con un nivel medio-alto.</p>
           </div>
-          <dl class="split__facts">
-            <div><dt><span lang="en">Chess</span><span lang="es">Ajedrez</span></dt><dd><span lang="en">Club player · upper-intermediate</span><span lang="es">Jugador de club · nivel medio-alto</span></dd></div>
-            <div><dt><span lang="en">Puzzles</span><span lang="es">Puzles</span></dt><dd><span lang="en">Rubik's cubes</span><span lang="es">Cubos de Rubik</span></dd></div>
-            <div><dt><span lang="en">Travel</span><span lang="es">Viajar</span></dt><dd><span lang="en">Whenever I can</span><span lang="es">Siempre que puedo</span></dd></div>
-          </dl>
         </div>
       </div>
     </section>

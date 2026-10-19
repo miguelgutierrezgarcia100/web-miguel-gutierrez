@@ -6,14 +6,14 @@
   const STR = {
     en: {
       title: 'Miguel Gutiérrez García · Software Engineer & Developer',
-      description: 'Miguel Gutiérrez García, software engineer and developer. Stack, projects, game development and contact.',
+      description: 'Miguel Gutiérrez García, software engineer and full stack developer. Projects, technologies, game development and contact.',
       openMenu: 'Open menu',
       closeMenu: 'Close menu',
       copied: 'Email copied',
     },
     es: {
       title: 'Miguel Gutiérrez García · Ingeniero y Desarrollador de Software',
-      description: 'Miguel Gutiérrez García, ingeniero y desarrollador de software. Tecnologías, proyectos, videojuegos y contacto.',
+      description: 'Miguel Gutiérrez García, ingeniero de software y desarrollador full stack. Proyectos, tecnologías, videojuegos y contacto.',
       openMenu: 'Abrir menú',
       closeMenu: 'Cerrar menú',
       copied: 'Email copiado',
